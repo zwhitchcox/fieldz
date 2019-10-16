@@ -1,13 +1,17 @@
 {
   "devDependencies": {
     "expect": "^24.9.0",
+    "react": "^16.10.2",
     "tezt": "^1.1.0"
   },
   "name": "fieldz",
   "description": "",
   "version": "0.0.1",
   "main": "dist/lib.js",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "validatorz": "^1.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/zwhitchcox/fieldz/issues"
   },
-  "homepage": "https://github.com/zwhitchcox/fieldz#readme"
+  "homepage": "https://github.com/zwhitchcox/fieldz#readme",
+  "peerDependencies": {
+    "react": "^15.x"
+  }
 }
