@@ -1,1 +1,1 @@
-export const LIB_NAME  = () => "it works"
+export const fieldz  = () => "it works"
