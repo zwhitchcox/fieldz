@@ -3,6 +3,7 @@
     "target": "es2015",
     "module": "commonjs",
     "outDir": "dist",
+    "noImplicitAny": false,
     "sourceMap": true,
     "noEmitOnError": true,
     "moduleResolution": "node",
@@ -15,7 +16,7 @@
     "jsx": "react"
   },
   "files": [
-    "validatorz"
+    "lib.ts"
   ],
   "include": [
     "**/*.test.ts"

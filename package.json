@@ -1,31 +1,33 @@
 {
   "devDependencies": {
+    "@testing-library/react": "^9.3.0",
     "expect": "^24.9.0",
     "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "tezt": "^1.1.0"
   },
-  "name": "fieldz",
+  "name": "react-fieldz",
   "description": "",
   "version": "0.0.1",
   "main": "dist/lib.js",
   "dependencies": {
     "lodash": "^4.17.15",
-    "validatorz": "^1.2.0"
+    "validatorz": "^2.2.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zwhitchcox/fieldz.git"
+    "url": "git+https://github.com/zwhitchcox/react-fieldz.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zwhitchcox/fieldz/issues"
+    "url": "https://github.com/zwhitchcox/react-fieldz/issues"
   },
-  "homepage": "https://github.com/zwhitchcox/fieldz#readme",
+  "homepage": "https://github.com/zwhitchcox/react-fieldz#readme",
   "peerDependencies": {
     "react": "^15.x"
   }
