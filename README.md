@@ -44,7 +44,7 @@ Next, we instantiate our fieldz™ using the `fieldz` function:
 import { fieldz } from 'fieldz'
 // fieldProperties
 
-const [reducers, state] = fieldz(fieldProperties)
+const [actions, state] = fieldz(fieldProperties)
 ```
 
 You can see `fieldz` returns a tuple with two objects.
@@ -82,8 +82,8 @@ Quite simple, but how do we manipulate state?
 Well, for that, we'll turn to our handy dandy state-manipulators:
 
 ```ts
-const [reducers, state] = fieldz(fieldProperties)
-const {setValue, setValues, setTouched, resetField, resetFields } = reducers
+const [actions, state] = fieldz(fieldProperties)
+const {setValue, setValues, setTouched, resetField, resetFields } = actions
 ```
 
 Each function adjusts state and then returns the new state:
@@ -123,9 +123,9 @@ const fieldProperties = {
 }
 
 const Form = () => {
-  const [[reducers, formState], _setFormState] = useState(() => fieldz(fieldProperties))
-  const {setValue, setValues, setTouched, resetField, resetFields } = reducers
-  const setFormState = state => _setFormState([reducers, state])
+  const [[actions, formState], _setFormState] = useState(() => fieldz(fieldProperties))
+  const {setValue, setValues, setTouched, resetField, resetFields } = actions
+  const setFormState = state => _setFormState([actions, state])
 
   return (
     <form>
