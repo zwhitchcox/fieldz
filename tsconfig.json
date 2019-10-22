@@ -20,6 +20,6 @@
     "lib.ts"
   ],
   "include": [
-    "**/*.test.ts"
+    "lib.test.ts"
   ],
 }

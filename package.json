@@ -11,9 +11,7 @@
   "description": "",
   "version": "0.0.1",
   "main": "dist/lib.js",
-  "dependencies": {
-    "lodash": "^4.17.15"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
