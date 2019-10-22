@@ -22,4 +22,6 @@ export interface IFieldzActions {
   resetField: (key: string) => IFieldzState
   resetFields: () => IFieldzState
   setTouched: (key: string) => IFieldzState
+  getState: () => IFieldzState
+  setState: (IFieldzState) => IFieldzState
 }

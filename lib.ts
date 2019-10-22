@@ -25,7 +25,7 @@ const getValidator = validate => {
 
 const deepCopy = obj => JSON.parse(JSON.stringify(obj))
 
-export const fieldz = (fieldsInput: FieldzInput): [IFieldzActions, IFieldzState] => {
+export const fieldz = (fieldsInput: FieldzInput): IFieldzActions => {
   let state: IFieldzState = {}
   const validators = {}
   for (const fieldName in fieldsInput) {
@@ -77,14 +77,16 @@ export const fieldz = (fieldsInput: FieldzInput): [IFieldzActions, IFieldzState]
     )
   }
 
-  return [
-    {
-      setValue,
-      setValues,
-      resetFields,
-      resetField,
-      setTouched,
-    },
-    state
-  ]
+  const getState = () => state
+  const setState = state => (state = state)
+
+  return {
+    setValue,
+    setValues,
+    resetFields,
+    resetField,
+    setTouched,
+    getState,
+    setState,
+  }
 }

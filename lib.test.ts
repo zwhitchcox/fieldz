@@ -31,19 +31,20 @@ const initExpected = {
 
 let setValue, setTouched, setValues, resetFields, resetField, state;
 before(() => {
-  const [fns, _state] = fieldz(fieldProperties)
-  state = _state
-  setValue = fns.setValue
-  setTouched = fns.setTouched
-  setValues = fns.setValues
-  resetFields = fns.resetFields
-  resetField = fns.resetField
+  const {getState, ...actions} = fieldz(fieldProperties)
+  state = getState()
+  setValue = actions.setValue
+  setTouched = actions.setTouched
+  setValues = actions.setValues
+  resetFields = actions.resetFields
+  resetField = actions.resetField
 })
 
 
 
 test("it initializes", () => {
-  const [_, state] = fieldz(fieldProperties)
+  const { getState } = fieldz(fieldProperties)
+  const state = getState()
   expect(state).toEqual(initExpected)
 })
 

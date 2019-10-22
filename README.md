@@ -44,10 +44,13 @@ Next, we instantiate our fieldz™ using the `fieldz` function:
 import { fieldz } from 'fieldz'
 // fieldProperties
 
-const [actions, state] = fieldz(fieldProperties)
+const { getState } = fieldz(fieldProperties)
+const state = getState()
 ```
 
-You can see `fieldz` returns a tuple with two objects.
+You can see `fieldz` returns a function called `getState`.
+
+`getState` does just what it sounds like: gets state.
 
 `state` is the initial state of our fields. It's just data.
 
@@ -79,14 +82,14 @@ There are 4 state properties
 
 Quite simple, but how do we manipulate state?
 
-Well, for that, we'll turn to our handy dandy state-manipulators:
+Well, for that, we'll turn to our actions:
 
 ```ts
-const [actions, state] = fieldz(fieldProperties)
-const {setValue, setValues, setTouched, resetField, resetFields } = actions
+const { getState, ...actions } = fieldz(fieldProperties)
+const { setValue, setValues, setTouched, resetField, resetFields, setState } = actions
 ```
 
-Each function adjusts state and then returns the new state:
+Each action adjusts state and then returns the new state:
 
 * `setValue`:
   * takes a `key` and a `value`
@@ -98,6 +101,9 @@ Each function adjusts state and then returns the new state:
 * `setTouched`: sets field's `touched` property to true if not already set
 * `resetField`: sets a field's properties to their original value
 * `resetFields`: same as `resetField`, but for all fields
+* `setState`:
+  * sets the internal `fieldz` state
+  * hopefully, you'll never need this
 
 But enough of the theory, let's see it in action.
 
@@ -124,7 +130,7 @@ const fieldProperties = {
 
 const Form = () => {
   const [[actions, formState], _setFormState] = useState(() => fieldz(fieldProperties))
-  const {setValue, setValues, setTouched, resetField, resetFields } = actions
+  const { setValue, setValues, setTouched, resetField, resetFields, setState } = actions
   const setFormState = state => _setFormState([actions, state])
 
   return (
