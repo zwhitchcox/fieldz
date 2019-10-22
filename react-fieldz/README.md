@@ -19,16 +19,6 @@ const myform = () => {
   const {setValue, setTouched, setValues, resetFields, resetField} = state
 
   return (
-    <div className="top-errors">
-      {Object.entries(state.errors)
-      .map(([fieldName, errors]) => {
-        if (errors.length) {
-          return <div>Error(s) in {fieldName}
-            errors.map(err => <div>{err.toString()}</div>)
-          </div>
-        }
-      }).filter(Boolean)
-    </div>
     <form>
       {Object.entries(state.reverseMap)
         .map(([fieldName, {errors, value, touched, pristine}]) => (
