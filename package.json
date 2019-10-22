@@ -9,7 +9,7 @@
   },
   "name": "fieldz",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "dist/lib.js",
   "dependencies": {},
   "scripts": {
@@ -19,13 +19,20 @@
     "type": "git",
     "url": "git+https://github.com/zwhitchcox/fieldz.git"
   },
-  "keywords": ["fp", "functional programming", "fieldz", "forms", "form", "fields", "react"],
+  "keywords": [
+    "fp",
+    "functional programming",
+    "fieldz",
+    "forms",
+    "form",
+    "fields",
+    "react"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zwhitchcox/fieldz/issues"
   },
   "homepage": "https://github.com/zwhitchcox/fieldz#readme",
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }
