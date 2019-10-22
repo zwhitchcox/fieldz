@@ -1,4 +1,4 @@
-import { FieldzInput, IFieldzFns, IFieldzState } from './types'
+import { FieldzInput, IFieldzActions, IFieldzState } from './types'
 
 const memoize = fn => {
   const cache = {}
@@ -25,7 +25,7 @@ const getValidator = validate => {
 
 const deepCopy = obj => JSON.parse(JSON.stringify(obj))
 
-export const fieldz = (fieldsInput: FieldzInput): [IFieldzFns, IFieldzState] => {
+export const fieldz = (fieldsInput: FieldzInput): [IFieldzActions, IFieldzState] => {
   let state: IFieldzState = {}
   const validators = {}
   for (const fieldName in fieldsInput) {

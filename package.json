@@ -4,8 +4,8 @@
     "expect": "^24.9.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "validatorz": "^2.2.4",
-    "tezt": "^1.1.0"
+    "tezt": "^1.1.0",
+    "validatorz": "^2.2.4"
   },
   "name": "fieldz",
   "description": "",

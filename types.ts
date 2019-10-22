@@ -16,7 +16,7 @@ export interface IFieldzState {
   }
 }
 
-export interface IFieldzFns {
+export interface IFieldzActions {
   setValue: (key: string, newVal) => IFieldzState
   setValues: (newVals) => IFieldzState
   resetField: (key: string) => IFieldzState
