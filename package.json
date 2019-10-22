@@ -29,6 +29,5 @@
   },
   "homepage": "https://github.com/zwhitchcox/fieldz#readme",
   "peerDependencies": {
-    "react": "^15.x"
   }
 }

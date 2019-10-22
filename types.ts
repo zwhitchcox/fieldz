@@ -8,16 +8,12 @@ export interface IFieldzInputObject {
 }
 
 export interface IFieldzState {
-  errors: {[key: string]: Error[]}
-  values: {[key: string]: any}
-  touched: {[key: string]: boolean}
-  pristine: {[key: string]: boolean}
-  reverseMap: {[key: string]: {
-    error: Error[],
-    value: any,
+  [key: string]: {
+    errors: Error[],
     touched: boolean,
     pristine: boolean,
-  }}
+    value: any,
+  }
 }
 
 export interface IFieldzFns {
