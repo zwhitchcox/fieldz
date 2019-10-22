@@ -4,30 +4,30 @@
     "expect": "^24.9.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "validatorz": "^2.2.4",
     "tezt": "^1.1.0"
   },
-  "name": "react-fieldz",
+  "name": "fieldz",
   "description": "",
   "version": "0.0.1",
   "main": "dist/lib.js",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "validatorz": "^2.2.4"
+    "lodash": "^4.17.15"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zwhitchcox/react-fieldz.git"
+    "url": "git+https://github.com/zwhitchcox/fieldz.git"
   },
-  "keywords": [],
+  "keywords": ["fp", "functional programming", "fieldz", "forms", "form", "fields", "react"],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zwhitchcox/react-fieldz/issues"
+    "url": "https://github.com/zwhitchcox/fieldz/issues"
   },
-  "homepage": "https://github.com/zwhitchcox/react-fieldz#readme",
+  "homepage": "https://github.com/zwhitchcox/fieldz#readme",
   "peerDependencies": {
     "react": "^15.x"
   }
